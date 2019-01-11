@@ -3,10 +3,14 @@ check()
 function check() {
   let token = localStorage.getItem('token')
   if (token) {
-    $('#started').text('Get Started')
     $('#login').show()
+    $('#signinMethod').hide()
+    $('#started').show()
+    $('#logout').show()
   } else {
-    $('#started').text('Sign In')
     $('#login').hide()
+    $('#signinMethod').show()
+    $('#started').hide()
+    $('#logout').hide()
   }
 }
