@@ -978,3 +978,15 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-right: 30px;
   }
 }
+/* search bar */
+.form-control-borderless {
+  border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+/* recipe card */
+
