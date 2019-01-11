@@ -9,7 +9,7 @@
     }
   </style>
   <meta charset="utf-8">
-  <title>Bell Bootstrap 4 Theme</title>
+  <title>Resto-Finder</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -61,17 +61,17 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-md-12">
-          <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="img/logo.png"></a>
+          <a class="hero-brand" href="index.html" title="Home"><img class="w-50 h-50"alt="Bell Logo" src="img/finder.png"></a>
         </div>
       </div>
 
       <div class="col-md-12">
         <h1>
-            A theme with personality
-          </h1>
+          Resto-Finder
+        </h1>
 
         <p class="tagline">
-          This is a powerful theme with some great features that you can use in your future projects.
+          Laper laper laper
         </p>
         <a class="btn btn-full m-3" href="#" id="started">Get Started Now</a>
         <a class="btn btn-full" href="#" id="signinMethod" data-toggle="modal" data-target="#loginModal">Signin</a>
@@ -121,41 +121,24 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <a href="index.html"><img src="img/logo-nav.png" alt="" title="" /></img></a>
+        <a href="index.html"><img src="img/finder.png" alt="" title="" /></img></a>
         <!-- Uncomment below if you prefer to use a text image -->
         <!--<h1><a href="#hero">Bell</a></h1>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+          <li class="menu-has-children"><a href="">Categories</a>
+            <ul id="categories-nav">
             </ul>
           </li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li class="menu-has-children"><a href="">Cuisinines</a>
+            <ul id="cuisines-nav">
+            </ul>
+          </li>
+          <li class="menu"><a href="#recipe">Recipe Feature</a>
+          </li>
         </ul>
-      </nav>
-      <!-- #nav-menu-container -->HerHer
-
-      <nav class="nav social-nav pull-right d-none d-lg-inline">
-        <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
       </nav>
     </div>
   </header>
@@ -165,359 +148,56 @@
 
   <section class="about" id="about">
     <div class="container text-center">
-      <h2>
-          About Bell Theme
-        </h2>
-
-      <p>
-        Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
-        temporibus an duo.
-      </p>
-
-      <div class="row stats-row">
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">232</span> Satisfied Customers
-          </div>
+        <div class="input-group mb-3 dropdown">
+            <input type="text" class="form-control" id="search-form" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="search-button" data-toggle="dropdown" type="button"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
+            </div>
         </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">79</span> Released Projects
-          </div>
+    </div>
+    <div class="portfolio-grid">
+        <div class="row" id="restaurants-card">
         </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">1,463</span> Hours Of Support
-          </div>
-        </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">15</span> Hard Workers
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   <!-- /About -->
 
   <!-- MAP -->
   <div id="map"></div>
+  <div class="container text-center">
+        <a class="btn btn-full m-3" href="#map" id="directions" onclick="direction()">Get Directions</a>
+  </div>
   <!-- /MAP -->
 
-  <!-- Features -->
-
-  <section class="features" id="features">
-    <div class="container">
-      <h2 class="text-center">
-          Features
-        </h2>
-
+  <div class="container" id="recipe">
       <div class="row">
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-rocket"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  Custom Design
-                </h3>
-
-              <p>
-                Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-              </p>
-            </div>
+        <div class="row justify-content-center col-12">
+          <div class="col-4 mt-5">
+            <h3 >Recipe Finder</h3>
           </div>
-        </div>
-
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-envelope"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  Responsive Layout
-                </h3>
-
-              <p>
-                Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-bell"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  Innovative Ideas
-                </h3>
-
-              <p>
-                Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-              </p>
-            </div>
+          <div class="col-12 col-md-10 col-lg-8">
+              <form class="card card-sm" id="searchRecipe">
+                  <div class="card-body row no-gutters align-items-center">
+                      <!--end of col-->
+                      <div class="col">
+                          <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search recipe" id="search">
+                      </div>
+                      <!--end of col-->
+                      <div class="col-auto">
+                          <button class="btn btn-lg btn-success" type="submit">Search</button>
+                      </div>
+                      <!--end of col-->
+                  </div>
+              </form>
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-database"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  Good Documentation
-                </h3>
-
-              <p>
-                Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-cutlery"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  Excellent Features
-                </h3>
-
-              <p>
-                Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-dashboard"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  Retina Ready
-                </h3>
-
-              <p>
-                Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="row recipeList w-100 border align-items-left">
       </div>
-    </div>
-  </section>
-  <!-- /Features -->
+  </div>
+  
+
   <!-- Call to Action -->
-
-  <section class="cta" id="cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9 col-sm-12 text-lg-left text-center">
-          <h2>
-              Call to Action Section
-            </h2>
-
-          <p>
-            Lorem ipsum dolor sit amet, nec ad nisl mandamus imperdiet, ut corpora cotidieque cum. Et brute iracundia his, est eu idque dictas gubergren
-          </p>
-        </div>
-
-        <div class="col-lg-3 col-sm-12 text-lg-right text-center">
-          <a class="btn btn-ghost" href="#">Buy This Theme</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Call to Action -->
-  <!-- Portfolio -->
-
-  <section class="portfolio" id="portfolio">
-    <div class="container text-center">
-      <h2>
-          Portfolio
-        </h2>
-
-      <p>
-        Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, Per nihil dicant commodo an.
-      </p>
-    </div>
-
-    <div class="portfolio-grid">
-      <div class="row">
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-1.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-2.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-3.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-4.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-5.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-6.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-7.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-8.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- /Portfolio -->
   <!-- @component: footer -->
 </div>
@@ -553,6 +233,55 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMRdgd1-xW2l8-aF4aMNMV6ykEzeSk3tU&callback=initMap"
   async defer></script>
   <script src="js/maps.js"></script>
+  <script>
+      function getRecipes() {
+        let q = $('#search').val();
+        console.log(q);
+        let options ={
+          url: `http://localhost:3000/nutrition?q=${q}`,
+          method: 'GET',
+        }      
+        $.ajax(options)
+        .done(({top10}) => {
+          $('.recipeList').children().remove();
+          top10.forEach(recipe => {
+          let html ='';
+          let stars = Math.floor(recipe.social_rank /10);
+          html += `<div class="card w-25 ml-3 mt-3">`
+          html += `  <img class="card-img-top" src=${recipe.image_url} alt="recipe">`
+          html += `  <h5 class="card-title">${recipe.title}</h5>`
+          html +='<div class="d-flex justify-content-center stars">'
+          for(i=0; i<stars; i++) {
+            html += `<span class="fa fa-star checked col-1" style="display:inline"></span>`
+          }
+          html +='</div>'
+          html += `    <p class="card-text d-flex justify-content-center">created by: ${recipe.publisher}</p>`
+          html += `    <a href=${recipe.source_url} class="btn btn-warning">Get recipe</a>`
+          html += `  </div>`
+          html += `</div>`
+          $('.card').css('background-color','#f1f1f1')
+          $('.recipeList').append(html)
+          })
+        })
+        .fail(()=> {
+          console.log('server request failed');
+          $('.recipeList').children().remove();
+          html +='</div>'
+          html += ` <h3> server error. Please try again. </h3>`
+          html += `</div>`
+          $('.recipeList').append(html)
+        })
+      }
+      
+      $(document).ready(()=> {
+        $('#searchRecipe').submit((event)=> {
+          getRecipes();
+          event.preventDefault()
+        })
+  
+      })
+    
+    </script>
 
 </body>
 </html>
