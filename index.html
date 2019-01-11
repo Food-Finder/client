@@ -128,32 +128,17 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+          <li class="menu-has-children"><a href="">Categories</a>
+            <ul id="categories-nav">
             </ul>
           </li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li class="menu-has-children"><a href="">Cuisinines</a>
+            <ul id="cuisines-nav">
+            </ul>
+          </li>
         </ul>
       </nav>
-      <!-- #nav-menu-container -->HerHer
-
+      <!-- #nav-menu-container -->
       <nav class="nav social-nav pull-right d-none d-lg-inline">
         <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
       </nav>
@@ -165,41 +150,17 @@
 
   <section class="about" id="about">
     <div class="container text-center">
-      <h2>
-          About Bell Theme
-        </h2>
-
-      <p>
-        Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
-        temporibus an duo.
-      </p>
-
-      <div class="row stats-row">
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">232</span> Satisfied Customers
-          </div>
+        <div class="input-group mb-3 dropdown">
+            <input type="text" class="form-control" id="search-form" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="search-button" data-toggle="dropdown" type="button"><i class="fa fa-search text-grey" aria-hidden="true"></i></button>
+            </div>
         </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">79</span> Released Projects
-          </div>
-        </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">1,463</span> Hours Of Support
-          </div>
-        </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">15</span> Hard Workers
-          </div>
-        </div>
-      </div>
     </div>
+    <div class="portfolio-grid">
+        <div class="row" id="restaurants-card">  
+        </div>
+    </div>  
   </section>
   <!-- /About -->
 
