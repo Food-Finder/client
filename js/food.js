@@ -35,7 +35,7 @@ getRestaurants()
       $('#restaurants-card').append(`
       <div class="col-sm-3 col-sm-3 col-xs-12">
         <div class="card card-block">
-          <a href="#"><img alt="" src="${item.restaurant.thumb}">
+          <a href="#map" onclick= "pointer(${item.restaurant.location.latitude}, ${item.restaurant.location.longitude})"><img alt="" src="${item.restaurant.thumb}">
             <div class="portfolio-over">
               <div>
                 <h3 class="card-title">
@@ -45,6 +45,10 @@ getRestaurants()
                 <p class="card-text">
                   ${item.restaurant.location.address}
                 </p>
+                <p class="card-text">
+                  Categories: ${item.restaurant.cuisines}
+                </p>
+
               </div>
             </div></a>
         </div>
@@ -62,8 +66,8 @@ getRestaurants()
               $('#restaurants-card').append(`
               <div class="col-sm-3 col-sm-3 col-xs-12">
                 <div class="card card-block">
-                  <a href="#"><img alt="" src="${item.restaurant.thumb}">
-                    <div class="portfolio-over">
+                <a href="#map" onclick= "pointer(${item.restaurant.location.latitude}, ${item.restaurant.location.longitude})"><img alt="" src="${item.restaurant.thumb}">
+                <div class="portfolio-over">
                       <div>
                         <h3 class="card-title">
                           ${item.restaurant.name}
@@ -71,6 +75,9 @@ getRestaurants()
                         
                         <p class="card-text">
                           ${item.restaurant.location.address}
+                        </p>
+                        <p class="card-text">
+                          Categories: ${item.restaurant.cuisines}
                         </p>
                       </div>
                     </div></a>
